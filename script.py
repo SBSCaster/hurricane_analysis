@@ -124,11 +124,11 @@ def future_preperations(hurricane_dict, affected):
     areas_hit_dict = {}
     for areas in affected:
         for area in areas:
-            kills = 0
+            hits = 0
             for cane in hurricane_dict.values():
                 if area in cane["Affected_Area"]:
-                    kills += 1
-            areas_hit_dict[area] = kills
+                    hits += 1
+            areas_hit_dict[area] = hits
     return areas_hit_dict
 
 how_many = future_preperations(hurricane_dictionary, areas_affected)
